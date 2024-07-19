@@ -35,7 +35,7 @@ class LoginController extends BaseController
         return redirect()->to('/kecamatan')->with('status', 'Login berhasil. Selamat datang!');
     } else {
         // Jika login gagal, kembali ke halaman login dengan pesan error
-        return redirect()->to('/')->with('error', 'Login gagal. Username atau password salah.');
+        return redirect()->to('/kecamatan')->with('error', 'Login gagal. Username atau password salah.');
     }
 }
 

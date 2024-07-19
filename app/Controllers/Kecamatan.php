@@ -12,9 +12,8 @@ class Kecamatan extends Controller
     {
         $model = new KecamatanModel();
         $view = new MapViewModel();
-        $data['bengkel'] = $model->tek(); // Ambil data utama dari model KecamatanModel
-        $data['view'] = $view->dos(); // Ambil data utama dari model KecamatanModel
-
+        $data['bengkel'] = $model->tek();
+        $data['view'] = $view->dos(); 
         return 
         view('kecamatan/pecah/header', $data).
         view('kecamatan/index', $data).
@@ -100,10 +99,6 @@ public function update()
     // Redirect atau tampilkan pesan sukses
     return redirect()->to('/kecamatan')->with('status', 'Data bengkel berhasil diperbarui');
 }
-
-
-
-
 
     public function delete($id)
     {
